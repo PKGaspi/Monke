@@ -5,15 +5,16 @@ using UnityEngine.InputSystem;
 
 public class PlayableCharacter : MonoBehaviour
 {
-    public const int MAX_N_JUMPS = 2;
+    public const int AERIAL_JUMPS = 1;
 
     private CharacterController controller;
-    private Vector3 velocity;
+    public Vector3 velocity;
     private Vector3 rawInputMovement = Vector3.zero;
     private float gravity = -15.0f;
     private float walk_speed = 3.0f;
     private float jump_speed = 6.0f;
-    public int n_jumps = MAX_N_JUMPS;
+    private int jumps_left = AERIAL_JUMPS;
+    public bool isGrounded = true;
 
 
 
@@ -32,12 +33,14 @@ public class PlayableCharacter : MonoBehaviour
             gameObject.transform.forward = rawInputMovement;        
         }
 
-        // Apply gravity
         if (controller.isGrounded && velocity.y < 0) {
             velocity.y = 0;
-            n_jumps = MAX_N_JUMPS;
+            jumps_left = AERIAL_JUMPS;
+            isGrounded = true;
         } else {
+            // Apply gravity
             velocity.y += gravity * Time.deltaTime;
+            isGrounded = false;
         }
         
         velocity.x = walk_speed * rawInputMovement.x;
@@ -51,9 +54,12 @@ public class PlayableCharacter : MonoBehaviour
     }
 
     public void OnJump(InputAction.CallbackContext value) {
-        if (value.started && n_jumps > 0) {
+        if (value.started && jumps_left > 0) {
             velocity.y = jump_speed;
-            n_jumps--;
+            if (!controller.isGrounded) {
+                jumps_left--;
+            }
+            isGrounded = false;
         }
     }
 }
