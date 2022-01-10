@@ -11,7 +11,8 @@
                     "id": "a71aefed-b366-447b-b1d8-e24c0696b4d3",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Jump",
@@ -19,7 +20,8 @@
                     "id": "72bd40bc-ce97-4f2d-bc4d-b3fc95f69059",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -147,7 +149,7 @@
                 {
                     "name": "",
                     "id": "631a499d-965d-4f13-8a8f-dd7effdf91ec",
-                    "path": "<Gamepad>/rightTrigger",
+                    "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",

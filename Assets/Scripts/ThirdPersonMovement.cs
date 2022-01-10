@@ -15,8 +15,8 @@ public class ThirdPersonMovement : MonoBehaviour
     private float gravity = -15.0f;
     private float walkSpeed = 3.0f;
     private float jumpSpeed = 6.0f;
-    private int jumpsLeft = AERIAL_JUMPS;
-    public bool isGrounded = true;
+    private float aerialJumpSpeed = 8.0f;
+    public int aerialJumpsLeft = AERIAL_JUMPS;
 
 
 
@@ -28,27 +28,22 @@ public class ThirdPersonMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        // Change facing direction
-        // if (movementDir != Vector3.zero) {
-        //     gameObject.transform.forward = movementDir;        
-        // }
-
-        if (controller.isGrounded && velocity.y < 0) {
-            velocity.y = 0;
-            jumpsLeft = AERIAL_JUMPS;
-            isGrounded = true;
-        } else {
-            // Apply gravity
-            velocity.y += gravity * Time.deltaTime;
-            isGrounded = false;
+        if (controller.isGrounded) {
+            aerialJumpsLeft = AERIAL_JUMPS;
         }
-        
 
+        // Apply gravity
+        velocity.y += gravity * Time.deltaTime;
         velocity.x = walkSpeed * movementDir.x;
         velocity.z = walkSpeed * movementDir.z;
+
+        // Apply movement.
         controller.Move(velocity * Time.deltaTime);
+
+        // Update values after movement.
+        velocity = controller.velocity;
     }
 
     public void OnMovement(InputAction.CallbackContext value) {
@@ -56,16 +51,21 @@ public class ThirdPersonMovement : MonoBehaviour
         movementDir = Quaternion.Euler(0f, cam.eulerAngles.y, 0f) * new Vector3(inputMovementDir.x, 0f, inputMovementDir.y);
 
         // Face towards movement dir.
-        transform.forward = movementDir; 
+        if (movementDir != Vector3.zero) {
+            transform.forward = movementDir; 
+        }
     }
 
     public void OnJump(InputAction.CallbackContext value) {
-        if (value.started && jumpsLeft > 0) {
-            velocity.y = jumpSpeed;
+        if (value.started && aerialJumpsLeft > 0) {
             if (!controller.isGrounded) {
-                jumpsLeft--;
+                // Remove aerial jump.
+                aerialJumpsLeft--;
+                velocity.y = aerialJumpSpeed;
             }
-            isGrounded = false;
+            else {
+                velocity.y = jumpSpeed;
+            }
         }
     }
 }
