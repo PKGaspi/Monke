@@ -700,7 +700,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.010037674, y: 0.9899324, z: -0.10362484, w: -0.09589033}
+  m_LocalRotation: {x: -0.010037682, y: 0.9899324, z: -0.10362484, w: -0.095890366}
   m_LocalPosition: {x: 0.8354419, y: 3.0800002, z: 7.441269}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -998,6 +998,42 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 72bd40bc-ce97-4f2d-bc4d-b3fc95f69059
     m_ActionName: CharacterControll/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1258515611}
+        m_TargetAssemblyTypeName: ThirdPersonMovement, Assembly-CSharp
+        m_MethodName: OnGadget
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 45c61803-e975-4b32-90b6-4cd9f5309ba2
+    m_ActionName: CharacterControll/Gadget / Camera
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1258515611}
+        m_TargetAssemblyTypeName: ThirdPersonMovement, Assembly-CSharp
+        m_MethodName: OnGadgetCameraToggle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 14d2ceef-1193-4fd0-8efe-990c225d4252
+    m_ActionName: CharacterControll/Gadget / Camera Toggle
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f2b57a38-967b-4ef5-8eee-09609e58add3
+    m_ActionName: CharacterControll/Look[/XInputControllerWindows/rightStick,/Mouse/delta]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: CharacterControll
@@ -1035,9 +1071,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1258515610}
   cam: {fileID: 963194228}
+  camInput: {fileID: 1434796157}
+  playerInput: {fileID: 1258515609}
   velocity: {x: 0, y: 0, z: 0}
   aerialJumpsLeft: 1
-  isGrounded: 1
 --- !u!1 &1397201188
 GameObject:
   m_ObjectHideFlags: 3
@@ -1062,7 +1099,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1397201188}
-  m_LocalRotation: {x: -0.010037673, y: 0.9899325, z: -0.10362481, w: -0.095890336}
+  m_LocalRotation: {x: -0.010037676, y: 0.9899325, z: -0.10362481, w: -0.09589037}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1107,7 +1144,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.8003385, y: 1}
+    m_SensorSize: {x: 2.0334263, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1182,7 +1219,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.8003385, y: 1}
+    m_SensorSize: {x: 2.0334263, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1269,7 +1306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerIndex: -1
-  XYAxis: {fileID: -5630151704836100654, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  XYAxis: {fileID: 2989263718597391014, guid: ca36fa8b4e7a4914bb25ca89364b28a6, type: 3}
   ZAxis: {fileID: 0}
 --- !u!1 &1466407076
 GameObject:
@@ -1295,7 +1332,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466407076}
-  m_LocalRotation: {x: -0.011780208, y: 0.98788375, z: -0.121614054, w: -0.09569188}
+  m_LocalRotation: {x: -0.0117802145, y: 0.9878838, z: -0.12161402, w: -0.09569196}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1340,7 +1377,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.8003385, y: 1}
+    m_SensorSize: {x: 2.0334263, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1373,7 +1410,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750759150}
-  m_LocalRotation: {x: -0.008296433, y: 0.99164945, z: -0.08564896, w: -0.09605666}
+  m_LocalRotation: {x: -0.008296434, y: 0.99164945, z: -0.08564895, w: -0.09605669}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1418,7 +1455,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.8003385, y: 1}
+    m_SensorSize: {x: 2.0334263, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
