@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GadgetSword : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class GadgetSword : Gadget {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public Animation animation;
+
+    public override void Use(Vector2 dir) {
+        animation.Play();
     }
 }

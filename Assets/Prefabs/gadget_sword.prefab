@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5479576992225604093}
   - component: {fileID: 8315969178945858649}
+  - component: {fileID: 82178002208786053}
   m_Layer: 0
   m_Name: gadget_sword
   m_TagString: Untagged
@@ -45,6 +46,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c21c9a1e31e3d4fa6b72830fc17986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animation: {fileID: 82178002208786053}
+--- !u!111 &82178002208786053
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635286712508737552}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 6954ed3f75c62be4f8f9dec52b1829db, type: 2}
+  m_Animations:
+  - {fileID: 0}
+  - {fileID: 7400000, guid: 6954ed3f75c62be4f8f9dec52b1829db, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &2616422329555219182
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9012643641355993847}
   m_LocalRotation: {x: -0.24385624, y: 0.24385624, z: 0.66372746, w: 0.66372746}
-  m_LocalPosition: {x: 0, y: 1.4039704, z: 0}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -189,7 +208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9577ff45c8e790b4088aa5eb1cb6b738, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9577ff45c8e790b4088aa5eb1cb6b738, type: 3}
       propertyPath: m_LocalPosition.z

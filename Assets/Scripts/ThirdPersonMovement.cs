@@ -11,8 +11,9 @@ public class ThirdPersonMovement : MonoBehaviour {
     public Transform cam;
     public CinemachineInputProvider camInput;
     public PlayerInput playerInput;
+    public Gadget gadget;
 
-    public Vector3 velocity;
+    private Vector3 velocity;
     private Vector3 movementDir = Vector3.zero;
     private Vector3 gadgetDir = Vector3.zero;
     private float gravity = -15.0f;
@@ -21,7 +22,7 @@ public class ThirdPersonMovement : MonoBehaviour {
     private float aerialJumpSpeed = 8.0f;
     private bool canUseGadget = false;
     private InputActionReference defaultXYAxis;
-    public int aerialJumpsLeft = AERIAL_JUMPS;
+    private int aerialJumpsLeft = AERIAL_JUMPS;
 
 
 
@@ -92,6 +93,8 @@ public class ThirdPersonMovement : MonoBehaviour {
         movementDir = Vector3.zero;
         Vector2 inputGadgetDir = value.ReadValue<Vector2>();
         gadgetDir = Quaternion.Euler(0f, cam.eulerAngles.y, 0f) * new Vector3(inputGadgetDir.x, 0f, inputGadgetDir.y);
+
+        gadget.Use(inputGadgetDir);
 
         // Use gadget
         if (gadgetDir != Vector3.zero) {
