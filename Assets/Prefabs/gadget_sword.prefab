@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c21c9a1e31e3d4fa6b72830fc17986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animation: {fileID: 82178002208786053}
+  activateAnimation: {fileID: 82178002208786053}
 --- !u!111 &82178002208786053
 Animation:
   m_ObjectHideFlags: 0
@@ -58,7 +58,6 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 6954ed3f75c62be4f8f9dec52b1829db, type: 2}
   m_Animations:
-  - {fileID: 0}
   - {fileID: 7400000, guid: 6954ed3f75c62be4f8f9dec52b1829db, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0

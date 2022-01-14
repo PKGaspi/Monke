@@ -94,7 +94,7 @@ public class ThirdPersonMovement : MonoBehaviour {
         Vector2 inputGadgetDir = value.ReadValue<Vector2>();
         gadgetDir = Quaternion.Euler(0f, cam.eulerAngles.y, 0f) * new Vector3(inputGadgetDir.x, 0f, inputGadgetDir.y);
 
-        gadget.Use(inputGadgetDir);
+        gadget.Use(inputGadgetDir.magnitude);
 
         // Use gadget
         if (gadgetDir != Vector3.zero) {

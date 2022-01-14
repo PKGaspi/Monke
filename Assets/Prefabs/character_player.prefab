@@ -283,6 +283,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   camInput: {fileID: 0}
   playerInput: {fileID: 6150841428706181877}
+  gadget: {fileID: 0}
 --- !u!1 &3821056978667855587
 GameObject:
   m_ObjectHideFlags: 0
