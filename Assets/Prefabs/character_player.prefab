@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2467857423711685678}
+  - component: {fileID: 2540159502619986852}
   m_Layer: 0
-  m_Name: Gadget
+  m_Name: GadgetHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601437549079248254}
   m_LocalRotation: {x: 0.27059805, y: 0.6532815, z: 0.27059805, w: 0.6532815}
-  m_LocalPosition: {x: 0.6, y: -0.4, z: 0.4}
+  m_LocalPosition: {x: 0.6, y: 0, z: 0.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32,6 +33,24 @@ Transform:
   m_Father: {fileID: 1767686176129573690}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 45}
+--- !u!114 &2540159502619986852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601437549079248254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c3bc32c3e838946a889f686e8e0d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equipedGadgets:
+  - {fileID: 8315969178945858649, guid: ee68e5c5a9541cc45949974e3f741ff8, type: 3}
+  - {fileID: 8315969178945858649, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  currentGadget: {fileID: 6628291234849035135}
 --- !u!1 &2725346129846214356
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,6 +281,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: f2b57a38-967b-4ef5-8eee-09609e58add3
     m_ActionName: CharacterControll/Look[/XInputControllerWindows/rightStick,/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2540159502619986852}
+        m_TargetAssemblyTypeName: GadgetHandler, Assembly-CSharp
+        m_MethodName: OnSetGadget
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0d941b89-754c-4196-b9b3-6e3916b43ce0
+    m_ActionName: CharacterControll/Set Gadget[/XInputControllerWindows/buttonSouth,/Keyboard/1,/XInputControllerWindows/buttonWest,/Keyboard/2,/XInputControllerWindows/buttonNorth,/Keyboard/3,/XInputControllerWindows/buttonEast,/Keyboard/4]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: CharacterControll
@@ -283,7 +318,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   camInput: {fileID: 0}
   playerInput: {fileID: 6150841428706181877}
-  gadget: {fileID: 0}
+  gadgetHandler: {fileID: 2540159502619986852}
 --- !u!1 &3821056978667855587
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +492,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
+--- !u!114 &6628291234849035135 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8315969178945858649, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
+  m_PrefabInstance: {fileID: 2924008418000322342}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48c21c9a1e31e3d4fa6b72830fc17986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7250641554575691483 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5479576992225604093, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}

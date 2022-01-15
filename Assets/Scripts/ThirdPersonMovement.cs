@@ -11,7 +11,7 @@ public class ThirdPersonMovement : MonoBehaviour {
     public Transform cam;
     public CinemachineInputProvider camInput;
     public PlayerInput playerInput;
-    public Gadget gadget;
+    public GadgetHandler gadgetHandler;
 
     private Vector3 velocity;
     private Vector3 movementDir = Vector3.zero;
@@ -52,16 +52,12 @@ public class ThirdPersonMovement : MonoBehaviour {
     }
 
     public void OnMovement(InputAction.CallbackContext value) {
-        if (gadgetDir != Vector3.zero) {
-            // Use gadget and not move.
-            return;
-        }
 
         Vector2 inputMovementDir = value.ReadValue<Vector2>();
         movementDir = Quaternion.Euler(0f, cam.eulerAngles.y, 0f) * new Vector3(inputMovementDir.x, 0f, inputMovementDir.y);
 
         // Face towards movement dir.
-        if (movementDir != Vector3.zero) {
+        if (gadgetDir == Vector3.zero && movementDir != Vector3.zero) {
             transform.forward = movementDir; 
         }
     }
@@ -90,11 +86,11 @@ public class ThirdPersonMovement : MonoBehaviour {
         }
 
         // Get gadget dir and cancel movement.
-        movementDir = Vector3.zero;
+        //movementDir = Vector3.zero;
         Vector2 inputGadgetDir = value.ReadValue<Vector2>();
         gadgetDir = Quaternion.Euler(0f, cam.eulerAngles.y, 0f) * new Vector3(inputGadgetDir.x, 0f, inputGadgetDir.y);
 
-        gadget.Use(inputGadgetDir.magnitude);
+        gadgetHandler.Use(inputGadgetDir.magnitude);
 
         // Use gadget
         if (gadgetDir != Vector3.zero) {
@@ -117,6 +113,7 @@ public class ThirdPersonMovement : MonoBehaviour {
             // Set Camera and disable camera.
             gadgetDir = Vector3.zero;
             canUseGadget = false;
+            gadgetHandler.Use(0);
             camInput.XYAxis = defaultXYAxis;
             playerInput.actions["Look"].Enable();
         }
