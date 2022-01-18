@@ -4,28 +4,20 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
 
-public class ThirdPersonMovement : MonoBehaviour {
+public class ThirdPersonMovement : Character {
     public const int AERIAL_JUMPS = 1;
-    public const int MAX_HP = 5;
 
-    public CharacterController controller;
     public Transform cam;
     public CinemachineInputProvider camInput;
     public PlayerInput playerInput;
     public GadgetHandler gadgetHandler;
 
-    private Vector3 velocity;
-    private Vector3 movementDir = Vector3.zero;
     private Vector3 gadgetDir = Vector3.zero;
-    private float gravity = -15.0f;
-    private float walkSpeed = 3.0f;
-    private float jumpSpeed = 6.0f;
+
     private float aerialJumpSpeed = 8.0f;
     private bool canUseGadget = false;
     private InputActionReference defaultXYAxis;
     private int aerialJumpsLeft = AERIAL_JUMPS;
-    private int hp = MAX_HP;
-
 
     // Start is called before the first frame update
     void Start() {
@@ -39,26 +31,17 @@ public class ThirdPersonMovement : MonoBehaviour {
             aerialJumpsLeft = AERIAL_JUMPS;
         }
 
-        // Apply gravity
-        velocity.y += gravity * Time.deltaTime;
-        velocity.x = walkSpeed * movementDir.x;
-        velocity.z = walkSpeed * movementDir.z;
-
-        // Apply movement.
-        controller.Move(velocity * Time.deltaTime);
-
-        // Update values after movement.
-        velocity = controller.velocity;
+        Move(walkSpeed);
     }
 
     public void OnMovement(InputAction.CallbackContext value) {
 
         Vector2 inputMovementDir = value.ReadValue<Vector2>();
-        movementDir = Quaternion.Euler(0f, cam.eulerAngles.y, 0f) * new Vector3(inputMovementDir.x, 0f, inputMovementDir.y);
+        moveDir = Quaternion.Euler(0f, cam.eulerAngles.y, 0f) * new Vector3(inputMovementDir.x, 0f, inputMovementDir.y);
 
         // Face towards movement dir.
-        if (gadgetDir == Vector3.zero && movementDir != Vector3.zero) {
-            transform.forward = movementDir; 
+        if (gadgetDir == Vector3.zero && moveDir != Vector3.zero) {
+            transform.forward = moveDir; 
         }
     }
 
@@ -86,7 +69,7 @@ public class ThirdPersonMovement : MonoBehaviour {
         }
 
         // Get gadget dir and cancel movement.
-        //movementDir = Vector3.zero;
+        //moveDir = Vector3.zero;
         Vector2 inputGadgetDir = value.ReadValue<Vector2>();
         gadgetDir = Quaternion.Euler(0f, cam.eulerAngles.y, 0f) * new Vector3(inputGadgetDir.x, 0f, inputGadgetDir.y);
 
@@ -119,14 +102,4 @@ public class ThirdPersonMovement : MonoBehaviour {
         }
     }
 
-    public void TakeDamage(int dmg=1) {
-        hp -= dmg;
-        if (hp <= 0) {
-            Die();
-        }
-    }
-
-    private void Die() {
-        print("im ded");
-    }
 }
