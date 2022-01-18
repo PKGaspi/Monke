@@ -6,6 +6,7 @@ using Cinemachine;
 
 public class ThirdPersonMovement : MonoBehaviour {
     public const int AERIAL_JUMPS = 1;
+    public const int MAX_HP = 5;
 
     public CharacterController controller;
     public Transform cam;
@@ -23,8 +24,7 @@ public class ThirdPersonMovement : MonoBehaviour {
     private bool canUseGadget = false;
     private InputActionReference defaultXYAxis;
     private int aerialJumpsLeft = AERIAL_JUMPS;
-
-
+    private int hp = MAX_HP;
 
 
     // Start is called before the first frame update
@@ -117,5 +117,16 @@ public class ThirdPersonMovement : MonoBehaviour {
             camInput.XYAxis = defaultXYAxis;
             playerInput.actions["Look"].Enable();
         }
+    }
+
+    public void TakeDamage(int dmg=1) {
+        hp -= dmg;
+        if (hp <= 0) {
+            Die();
+        }
+    }
+
+    private void Die() {
+        print("im ded");
     }
 }
