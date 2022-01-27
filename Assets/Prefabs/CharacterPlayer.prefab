@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2467857423711685678}
   - component: {fileID: 2540159502619986852}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GadgetHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 5270089988110151642}
   - component: {fileID: 4377065374326669881}
   - component: {fileID: 4243206442302899838}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,9 +146,10 @@ GameObject:
   - component: {fileID: 156206088993108740}
   - component: {fileID: 6150841428706181877}
   - component: {fileID: 5211855785025504512}
-  m_Layer: 0
+  - component: {fileID: 6906480619714153882}
+  m_Layer: 6
   m_Name: CharacterPlayer
-  m_TagString: Untagged
+  m_TagString: Players
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -314,11 +315,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7327633a4ad5d478b12b0ad9c3d497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHp: 5
+  walkSpeed: 3
+  runSpeed: 4
+  jumpSpeed: 6
+  HPBar: {fileID: 0}
+  invencibilityTime: 2.5
   controller: {fileID: 156206088993108740}
+  onHitAnimation: {fileID: 6906480619714153882}
   cam: {fileID: 0}
   camInput: {fileID: 0}
   playerInput: {fileID: 6150841428706181877}
   gadgetHandler: {fileID: 2540159502619986852}
+--- !u!111 &6906480619714153882
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3092476754028596558}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 97712817aa815c541bfba5b5b88a39ae, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 97712817aa815c541bfba5b5b88a39ae, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &3821056978667855587
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7318369413981607856}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +387,7 @@ GameObject:
   - component: {fileID: 3243901943086344841}
   - component: {fileID: 1791450780119719900}
   - component: {fileID: 4400104135532278383}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,6 +470,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: gadget_sword
       objectReference: {fileID: 0}
+    - target: {fileID: 635286712508737552, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438969393305476925, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2616422329555219182, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5479576992225604093, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -489,6 +525,10 @@ PrefabInstance:
     - target: {fileID: 5479576992225604093, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012643641355993847, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}

@@ -189,6 +189,6 @@ MonoBehaviour:
   unitTexture: {fileID: 2800000, guid: d1cc7928d2e76dc4b9c5d028fc307a24, type: 3}
   textureScale: 35
   startPoint: {x: -1, y: 0.2}
-  endPoint: {x: 0.2, y: -1}
+  endPoint: {x: -0.2, y: -1}
   radious: 100
   position: {x: 120, y: 120}

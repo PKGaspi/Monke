@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7297039164861551402}
   - component: {fileID: 6031484384148266845}
   - component: {fileID: 521583899720747853}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +51,9 @@ MonoBehaviour:
   runSpeed: 4
   jumpSpeed: 6
   HPBar: {fileID: 0}
+  invencibilityTime: 2.5
   controller: {fileID: 521583899720747853}
+  onHitAnimation: {fileID: 0}
   target: {fileID: 0}
   visionDistance: 0
 --- !u!143 &521583899720747853
@@ -84,7 +86,7 @@ GameObject:
   - component: {fileID: 1579225224141467811}
   - component: {fileID: 8420143267152272756}
   - component: {fileID: 5579644781858184379}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4765307874102458925}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +216,7 @@ GameObject:
   - component: {fileID: 9002463336995611093}
   - component: {fileID: 4225601578578115310}
   - component: {fileID: 6374140967407336162}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}

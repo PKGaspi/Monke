@@ -10,14 +10,28 @@ public class Character : MonoBehaviour {
     public float runSpeed = 4;
     public float jumpSpeed = 6.0f;
     public UIBar HPBar;
+    public float invencibilityTime = 2.5f;
     public CharacterController controller;
+    public Animation onHitAnimation;
 
     int hp;
     protected Vector3 velocity;
     protected Vector3 moveDir = Vector3.zero;
-
-    void Start() {
+    protected float invencibilityTimer = 0f;
+    protected bool invencible = false;
+ 
+    protected void Start() {
         hp = maxHp;
+    }
+
+    void Update() {
+        if (IsInvencible()) {
+            invencibilityTimer -= Time.deltaTime;
+        }
+        else if (onHitAnimation != null && onHitAnimation.isPlaying){
+            onHitAnimation.Stop();
+            onHitAnimation.Rewind("CharacterHit");
+        }
     }
 
     protected void Move(float speed) {
@@ -34,6 +48,11 @@ public class Character : MonoBehaviour {
     }
 
     public void OnHit() {
+        if (IsInvencible()) {
+            return;
+        }
+        onHitAnimation.Play();
+        invencibilityTimer = invencibilityTime;
         TakeDamage();
     }
 
@@ -49,5 +68,9 @@ public class Character : MonoBehaviour {
 
     private void Die() {
         print("im ded");
+    }
+
+    public bool IsInvencible() {
+        return invencibilityTimer > 0f;
     }
 }

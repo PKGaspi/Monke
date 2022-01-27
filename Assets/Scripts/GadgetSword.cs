@@ -6,10 +6,6 @@ public class GadgetSword : Gadget {
 
 
     protected override void Activate() {
-        // TODO
-        // Turn hitbox on
-        // Play sound
         activateAnimation.Play();
-        //print(speed);    
     }
 }

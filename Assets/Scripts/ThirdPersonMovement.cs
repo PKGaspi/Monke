@@ -20,7 +20,8 @@ public class ThirdPersonMovement : Character {
     private int aerialJumpsLeft = AERIAL_JUMPS;
 
     // Start is called before the first frame update
-    void Start() {
+    protected new void Start() {
+        base.Start();
         defaultXYAxis = camInput.XYAxis;
     }
 
@@ -100,6 +101,11 @@ public class ThirdPersonMovement : Character {
             camInput.XYAxis = defaultXYAxis;
             playerInput.actions["Look"].Enable();
         }
+    }
+
+    void OnControllerColliderHit(ControllerColliderHit col) {
+        if (col.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+            OnHit();
     }
 
 }

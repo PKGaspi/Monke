@@ -24,7 +24,6 @@ public class Enemy : Character
                     idleTimer = Random.Range(.3f, 1f); // Seconds to be stopped.
                     roamTimer = Random.Range(1.5f, 2.2f); // Seconds to roam after idleTimer.
                     moveDir = new Vector3(Random.Range(-1f, 1f), 0f, Random.Range(-1f, 1f)).normalized; // Roam dir
-                    print(moveDir);
                 }
                 else {
                     roamTimer -= Time.deltaTime;
@@ -42,7 +41,6 @@ public class Enemy : Character
         // Move
 
         Move(speed);
-        print(velocity);
         // Face towards movement dir.
         if (velocity != Vector3.zero) {
             transform.forward = moveDir; 
