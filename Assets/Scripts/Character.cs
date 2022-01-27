@@ -48,7 +48,7 @@ public class Character : MonoBehaviour {
         if (IsInvencible()) {
             return;
         }
-        // onHitAnimation.Play();
+        // TODO: Play sound
         invencibilityTimer = invencibilityTime;
         TakeDamage();
     }
@@ -64,6 +64,7 @@ public class Character : MonoBehaviour {
     }
 
     private void Die() {
+        // TODO: delete this instance.
         print("im ded");
     }
 

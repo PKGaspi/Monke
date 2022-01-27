@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
 
-public class ThirdPersonMovement : Character {
+public class ThirdPersonCharacter : Character {
     public const int AERIAL_JUMPS = 1;
 
     public Transform cam;
