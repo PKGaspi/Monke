@@ -10,9 +10,9 @@ public class Character : MonoBehaviour {
     public float runSpeed = 4;
     public float jumpSpeed = 6.0f;
     public UIBar HPBar;
-    public float invencibilityTime = 2.5f;
+    public float invencibilityTime = 1.5f;
     public CharacterController controller;
-    public Animation onHitAnimation;
+    public Animator animator;
 
     int hp;
     protected Vector3 velocity;
@@ -27,10 +27,7 @@ public class Character : MonoBehaviour {
     void Update() {
         if (IsInvencible()) {
             invencibilityTimer -= Time.deltaTime;
-        }
-        else if (onHitAnimation != null && onHitAnimation.isPlaying){
-            onHitAnimation.Stop();
-            onHitAnimation.Rewind("CharacterHit");
+            animator.SetFloat("invencibilityTimer", invencibilityTimer);
         }
     }
 
@@ -51,7 +48,7 @@ public class Character : MonoBehaviour {
         if (IsInvencible()) {
             return;
         }
-        onHitAnimation.Play();
+        // onHitAnimation.Play();
         invencibilityTimer = invencibilityTime;
         TakeDamage();
     }
