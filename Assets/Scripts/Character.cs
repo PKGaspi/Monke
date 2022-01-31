@@ -63,9 +63,10 @@ public class Character : MonoBehaviour {
         }
     }
 
-    private void Die() {
-        // TODO: delete this instance.
-        print("im ded");
+    protected virtual void Die() {
+        // TODO: play sound
+        // Delete this instance.
+        Destroy(gameObject);
     }
 
     public bool IsInvencible() {

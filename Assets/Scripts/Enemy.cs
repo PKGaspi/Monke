@@ -46,12 +46,15 @@ public class Enemy : Character
             transform.forward = moveDir; 
         }
     }
-
+    
     
     void OnControllerColliderHit(ControllerColliderHit col) {
         if (col.gameObject.layer == LayerMask.NameToLayer("Player")) {
             // Hit player
-            col.gameObject.GetComponent<ThirdPersonCharacter>().OnHit();            
+            ThirdPersonCharacter character = col.gameObject.GetComponent<ThirdPersonCharacter>();
+            if (character) {
+                character.OnHit();
+            }
         }
     }
 }

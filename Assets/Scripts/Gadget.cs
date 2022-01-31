@@ -3,6 +3,7 @@ using UnityEngine;
 public abstract class Gadget : MonoBehaviour {
 
     public Animation activateAnimation;
+    public float activeTime = .3f;
 
     private Vector3 defaultRotation;
     private Vector3 defaultPosition;
@@ -13,6 +14,7 @@ public abstract class Gadget : MonoBehaviour {
 
     protected float inclination = 0f; // From 0 to 1, how much actuated this gadget is.
     protected float speed = 0f; // Speed at which the gadget was used.
+    protected float activeTimer = 0f;
 
 
     public void Start() {
@@ -23,6 +25,7 @@ public abstract class Gadget : MonoBehaviour {
     public void Update() {
         transform.localRotation = Quaternion.Euler(Vector3.Lerp(defaultRotation, inclinatedRotation, inclination));
         transform.localPosition = Vector3.Lerp(defaultPosition, inclinatedPosition, inclination);
+        activeTimer = Mathf.Max(0, activeTimer - Time.deltaTime);
     }
 
     public void Use(float inclination) {
@@ -35,6 +38,22 @@ public abstract class Gadget : MonoBehaviour {
         }
     }
 
-    protected abstract void Activate();
+    protected void Activate() {
+        activateAnimation.Play();
+        activeTimer = activeTime;
+    }
+
+    public bool IsActive() {
+        return activeTimer > 0;
+    }
+
+    private void OnTriggerEnter(Collider col) {
+        Enemy enemy = col.gameObject.GetComponent<Enemy>();
+        if (enemy && IsActive()) {
+            OnEnemyHit(enemy);
+        }
+    }
+
+    protected abstract void OnEnemyHit(Enemy enemy);
 
 }

@@ -108,4 +108,10 @@ public class ThirdPersonCharacter : Character {
             OnHit();
     }
 
+    protected override void Die() {
+        // Don't delete this instance. Go to title screen.
+        // TODO
+        print("im ded");
+    }
+
 }
