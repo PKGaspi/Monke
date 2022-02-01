@@ -1153,10 +1153,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1050084082}
     - target: {fileID: 5211855785025504512, guid: 1677fa363b6208b438cf53de437c51e2, type: 3}
-      propertyPath: maxHp
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211855785025504512, guid: 1677fa363b6208b438cf53de437c51e2, type: 3}
       propertyPath: gadget
       value: 
       objectReference: {fileID: 495523632}
@@ -1326,7 +1322,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8888888, y: 1}
+    m_SensorSize: {x: 1.904703, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1401,7 +1397,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8888888, y: 1}
+    m_SensorSize: {x: 1.904703, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1559,7 +1555,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8888888, y: 1}
+    m_SensorSize: {x: 1.904703, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1637,7 +1633,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8888888, y: 1}
+    m_SensorSize: {x: 1.904703, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

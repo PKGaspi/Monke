@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateAnimation: {fileID: 82178002208786053}
+  activeTime: 0.3
 --- !u!111 &82178002208786053
 Animation:
   m_ObjectHideFlags: 0
@@ -74,10 +75,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.4
-  m_Height: 1.7
+  m_Radius: 0.16
+  m_Height: 1.6
   m_Direction: 1
-  m_Center: {x: 0, y: 0.35, z: 0}
+  m_Center: {x: 0, y: 0.55, z: 0}
 --- !u!1 &2616422329555219182
 GameObject:
   m_ObjectHideFlags: 0

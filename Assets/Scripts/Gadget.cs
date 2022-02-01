@@ -26,6 +26,7 @@ public abstract class Gadget : MonoBehaviour {
         transform.localRotation = Quaternion.Euler(Vector3.Lerp(defaultRotation, inclinatedRotation, inclination));
         transform.localPosition = Vector3.Lerp(defaultPosition, inclinatedPosition, inclination);
         activeTimer = Mathf.Max(0, activeTimer - Time.deltaTime);
+        GetComponent<CapsuleCollider>().enabled = IsActive();
     }
 
     public void Use(float inclination) {
