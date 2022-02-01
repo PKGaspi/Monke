@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using Cinemachine;
 
@@ -119,8 +120,7 @@ public class ThirdPersonCharacter : Character {
 
     protected override void Die() {
         // Don't delete this instance. Go to title screen.
-        // TODO
-        print("im ded");
+        SceneManager.LoadScene("GameOver");
     }
 
 }
