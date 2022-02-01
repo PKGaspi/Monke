@@ -10,7 +10,7 @@ public class UIBar : MonoBehaviour {
 
     public Texture backgroundTexture;
     public Texture unitTexture;
-    public float textureScale = 35f;
+    public float textureScale = 45f;
 
     public Vector2 startPoint = new Vector2(-1, 0);
     public Vector2 endPoint = new Vector2(0, -1);

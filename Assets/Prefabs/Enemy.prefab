@@ -59,6 +59,9 @@ MonoBehaviour:
   animator: {fileID: 614945503281381335}
   target: {fileID: 0}
   visionDistance: 0
+  drops:
+  - {fileID: 11400000, guid: 315ebb7239ec4c54c9d79c663a746ae0, type: 2}
+  - {fileID: 11400000, guid: 75b47845f5c4ffd4a9350e7286251887, type: 2}
 --- !u!143 &521583899720747853
 CharacterController:
   m_ObjectHideFlags: 0

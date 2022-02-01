@@ -108,6 +108,15 @@ public class ThirdPersonCharacter : Character {
             OnHit();
     }
 
+    void OnTriggerEnter(Collider col) {
+        if (col.gameObject.layer == LayerMask.NameToLayer("Drop") &&
+                hp < maxHp) {
+            // TODO: Play heal sound
+            Heal();
+            Destroy(col.gameObject);
+        }
+    }
+
     protected override void Die() {
         // Don't delete this instance. Go to title screen.
         // TODO

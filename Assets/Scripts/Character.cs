@@ -14,7 +14,7 @@ public class Character : MonoBehaviour {
     public CharacterController controller;
     public Animator animator;
 
-    int hp;
+    public int hp;
     protected Vector3 velocity;
     protected Vector3 moveDir = Vector3.zero;
     protected float invencibilityTimer = 0f;
@@ -53,13 +53,21 @@ public class Character : MonoBehaviour {
         TakeDamage();
     }
 
-    public void TakeDamage(int dmg=1) {
-        hp -= dmg;
-        if (HPBar != null) {
-            HPBar.value = hp;
-        }
+    public void TakeDamage(int ammount=1) {
+        SetHP(hp - ammount);
         if (hp <= 0) {
             Die();
+        }
+    }
+
+    public void Heal(int ammount=1) {
+        SetHP(hp + ammount);
+    }
+
+    private void SetHP(int value) {
+        hp = value;
+        if (HPBar != null) {
+            HPBar.value = hp;
         }
     }
 

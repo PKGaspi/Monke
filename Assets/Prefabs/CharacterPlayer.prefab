@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 5211855785025504512}
   - component: {fileID: 6906480619714153882}
   - component: {fileID: 4657341201262595576}
+  - component: {fileID: 6184771637832305657}
   m_Layer: 6
   m_Name: CharacterPlayer
   m_TagString: Players
@@ -299,6 +300,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0d941b89-754c-4196-b9b3-6e3916b43ce0
     m_ActionName: CharacterControll/Set Gadget[/XInputControllerWindows/buttonSouth,/Keyboard/1,/XInputControllerWindows/buttonWest,/Keyboard/2,/XInputControllerWindows/buttonNorth,/Keyboard/3,/XInputControllerWindows/buttonEast,/Keyboard/4]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a42d397b-fa15-4fb6-9c9c-fb07554f3c80
+    m_ActionName: CharacterControll/GadgetActivate[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: CharacterControll
@@ -324,6 +329,7 @@ MonoBehaviour:
   invencibilityTime: 1.5
   controller: {fileID: 156206088993108740}
   animator: {fileID: 4657341201262595576}
+  hp: 0
   cam: {fileID: 0}
   camInput: {fileID: 0}
   playerInput: {fileID: 6150841428706181877}
@@ -364,6 +370,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &6184771637832305657
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3092476754028596558}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3821056978667855587
 GameObject:
   m_ObjectHideFlags: 0

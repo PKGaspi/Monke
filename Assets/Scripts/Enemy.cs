@@ -7,6 +7,7 @@ public class Enemy : Character
 
     public GameObject target;
     public float visionDistance;
+    public WeightedDrop[] drops;
 
     private float roamTimer = 0;
     private float idleTimer = 0;
@@ -56,5 +57,28 @@ public class Enemy : Character
                 character.OnHit();
             }
         }
+    }
+
+    protected override void Die() {
+        GameObject drop = Drop();
+        if (drop != null) {
+            print("vidita");
+            Instantiate(drop, transform.position, transform.rotation);
+        }
+        base.Die();
+    }
+
+    private GameObject Drop() {
+        int totalWeight = 0;
+        foreach (WeightedDrop drop in drops) {
+            totalWeight += drop.weight;
+        }
+        int random = Random.Range(0, totalWeight);
+        foreach (WeightedDrop drop in drops) {
+            if (random <= drop.weight) {
+                return drop.gameObject;
+            }
+        }
+        return null;
     }
 }
