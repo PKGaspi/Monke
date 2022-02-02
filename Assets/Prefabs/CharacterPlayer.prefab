@@ -304,6 +304,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: a42d397b-fa15-4fb6-9c9c-fb07554f3c80
     m_ActionName: CharacterControll/GadgetActivate[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3c4e9fb2-c9c0-4c4f-b64d-45404a979490
+    m_ActionName: UI/GameStart[/XInputControllerWindows/buttonWest,/XInputControllerWindows/buttonSouth,/XInputControllerWindows/buttonEast,/XInputControllerWindows/buttonNorth,/XInputControllerWindows/start,/XInputControllerWindows/select,/Keyboard/enter,/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: CharacterControll
@@ -322,7 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHp: 5
-  walkSpeed: 3
+  walkSpeed: 3.5
   runSpeed: 4
   jumpSpeed: 6
   HPBar: {fileID: 0}

@@ -51,14 +51,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 2
   walkSpeed: 0.8
-  runSpeed: 4
+  runSpeed: 2
   jumpSpeed: 6
   HPBar: {fileID: 0}
   invencibilityTime: 0.5
   controller: {fileID: 521583899720747853}
   animator: {fileID: 614945503281381335}
+  hp: 0
   target: {fileID: 0}
-  visionDistance: 0
+  visionDistance: 4.5
   drops:
   - {fileID: 11400000, guid: 315ebb7239ec4c54c9d79c663a746ae0, type: 2}
   - {fileID: 11400000, guid: 75b47845f5c4ffd4a9350e7286251887, type: 2}

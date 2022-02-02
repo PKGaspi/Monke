@@ -36,11 +36,12 @@ public class Enemy : Character
             }
         }
         else {
-            // Target is nearby, attack
+            // Target is nearby
+            OnTargetInRange();
             speed = runSpeed;
         }
-        // Move
 
+        // Move
         Move(speed);
         // Face towards movement dir.
         if (velocity != Vector3.zero) {
@@ -80,5 +81,12 @@ public class Enemy : Character
             }
         }
         return null;
+    }
+
+    protected virtual void OnTargetInRange() {
+        // Chase by default.
+        Vector3 targetDir = (target.transform.position - transform.position);
+        targetDir.y = 0;
+        moveDir = targetDir.normalized;
     }
 }
