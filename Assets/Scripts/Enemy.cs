@@ -58,7 +58,6 @@ public class Enemy : Character
     protected override void Die() {
         GameObject drop = Drop();
         if (drop != null) {
-            print("vidita");
             Instantiate(drop, transform.position, transform.rotation);
         }
         base.Die();

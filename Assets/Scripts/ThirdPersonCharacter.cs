@@ -89,7 +89,6 @@ public class ThirdPersonCharacter : Character {
         }
         // Hold for gadget, release for camera.
         if (value.started) {
-            print("hold");
             // Set Gadget and disable camera.
             canUseGadget = true;
             playerInput.actions["Look"].Disable();
@@ -97,7 +96,6 @@ public class ThirdPersonCharacter : Character {
         }
         else if (value.canceled) {
             // Set Camera and disable camera.
-            print("release");
             gadgetDir = Vector3.zero;
             canUseGadget = false;
             gadgetHandler.Use(0);

@@ -28,7 +28,6 @@ public class UIBar : MonoBehaviour {
                 float angle = angleBase + i * angleStep;
                 float x = position.x + radious * Mathf.Cos(angle);
                 float y = position.y + radious * Mathf.Sin(angle);
-                // print("x: " + x + ", y: " + y);
                 Graphics.DrawTexture(new Rect(x, y, textureScale, textureScale), unitTexture);
             }
         }
