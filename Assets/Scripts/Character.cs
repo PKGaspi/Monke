@@ -44,7 +44,7 @@ public class Character : MonoBehaviour {
         velocity = controller.velocity;
     }
 
-    public void OnHit() {
+    public virtual void OnHit() {
         if (IsInvencible()) {
             return;
         }

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipedGadgets:
-  - {fileID: 8315969178945858649, guid: ee68e5c5a9541cc45949974e3f741ff8, type: 3}
+  - {fileID: 389619038571511799, guid: ee68e5c5a9541cc45949974e3f741ff8, type: 3}
   - {fileID: 8315969178945858649, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
   - {fileID: 0}
   - {fileID: 0}
@@ -146,7 +146,6 @@ GameObject:
   - component: {fileID: 156206088993108740}
   - component: {fileID: 6150841428706181877}
   - component: {fileID: 5211855785025504512}
-  - component: {fileID: 6906480619714153882}
   - component: {fileID: 4657341201262595576}
   - component: {fileID: 6184771637832305657}
   m_Layer: 6
@@ -217,9 +216,13 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3c4e9fb2-c9c0-4c4f-b64d-45404a979490
+    m_ActionName: UI/GameStart[/XInputControllerWindows/buttonWest,/XInputControllerWindows/buttonSouth,/XInputControllerWindows/buttonEast,/XInputControllerWindows/buttonNorth,/XInputControllerWindows/start,/XInputControllerWindows/select,/Keyboard/enter,/Keyboard/space]
+  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5211855785025504512}
-        m_TargetAssemblyTypeName: ThirdPersonMovement, Assembly-CSharp
+        m_TargetAssemblyTypeName: ThirdPersonCharacter, Assembly-CSharp
         m_MethodName: OnMovement
         m_Mode: 0
         m_Arguments:
@@ -230,12 +233,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: a71aefed-b366-447b-b1d8-e24c0696b4d3
-    m_ActionName: CharacterControll/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+    m_ActionId: 3fc8cb7a-2658-4424-8755-04c080ebcb0a
+    m_ActionName: CharacterControll/Movement[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5211855785025504512}
-        m_TargetAssemblyTypeName: ThirdPersonMovement, Assembly-CSharp
+        m_TargetAssemblyTypeName: ThirdPersonCharacter, Assembly-CSharp
         m_MethodName: OnJump
         m_Mode: 0
         m_Arguments:
@@ -246,12 +249,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 72bd40bc-ce97-4f2d-bc4d-b3fc95f69059
-    m_ActionName: CharacterControll/Jump[/Keyboard/space]
+    m_ActionId: 2c9f6092-6b19-4330-8d68-44ed572ca0d0
+    m_ActionName: CharacterControll/Jump[/XInputControllerWindows/rightShoulder,/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5211855785025504512}
-        m_TargetAssemblyTypeName: ThirdPersonMovement, Assembly-CSharp
+        m_TargetAssemblyTypeName: ThirdPersonCharacter, Assembly-CSharp
         m_MethodName: OnGadget
         m_Mode: 0
         m_Arguments:
@@ -262,12 +265,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 45c61803-e975-4b32-90b6-4cd9f5309ba2
-    m_ActionName: CharacterControll/Gadget / Camera
+    m_ActionId: 00456e43-0bd2-4f93-985a-f6cc64c4cb36
+    m_ActionName: CharacterControll/Gadget[/XInputControllerWindows/rightStick,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c98d173d-7b68-4774-a5a3-4247465307ba
+    m_ActionName: CharacterControll/Look[/XInputControllerWindows/rightStick,/Mouse/delta]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5211855785025504512}
-        m_TargetAssemblyTypeName: ThirdPersonMovement, Assembly-CSharp
+        m_TargetAssemblyTypeName: ThirdPersonCharacter, Assembly-CSharp
         m_MethodName: OnGadgetCameraToggle
         m_Mode: 0
         m_Arguments:
@@ -278,36 +285,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 14d2ceef-1193-4fd0-8efe-990c225d4252
-    m_ActionName: CharacterControll/Gadget / Camera Toggle
+    m_ActionId: 33295dc7-fd8e-4852-ac59-98edc723b239
+    m_ActionName: CharacterControll/Gadget / Look Toggle[/XInputControllerWindows/leftShoulder,/Keyboard/upArrow]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: f2b57a38-967b-4ef5-8eee-09609e58add3
-    m_ActionName: CharacterControll/Look[/XInputControllerWindows/rightStick,/Mouse/delta]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2540159502619986852}
-        m_TargetAssemblyTypeName: GadgetHandler, Assembly-CSharp
-        m_MethodName: OnSetGadget
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 0d941b89-754c-4196-b9b3-6e3916b43ce0
+    m_ActionId: 285b18c6-b1cb-4beb-bf12-f5f63b946d20
     m_ActionName: CharacterControll/Set Gadget[/XInputControllerWindows/buttonSouth,/Keyboard/1,/XInputControllerWindows/buttonWest,/Keyboard/2,/XInputControllerWindows/buttonNorth,/Keyboard/3,/XInputControllerWindows/buttonEast,/Keyboard/4]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: a42d397b-fa15-4fb6-9c9c-fb07554f3c80
+    m_ActionId: 3dd9b12f-aa3e-4bc2-aee4-9a3cd6fe7f95
     m_ActionName: CharacterControll/GadgetActivate[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 3c4e9fb2-c9c0-4c4f-b64d-45404a979490
-    m_ActionName: UI/GameStart[/XInputControllerWindows/buttonWest,/XInputControllerWindows/buttonSouth,/XInputControllerWindows/buttonEast,/XInputControllerWindows/buttonNorth,/XInputControllerWindows/start,/XInputControllerWindows/select,/Keyboard/enter,/Keyboard/space]
+    m_ActionId: 4e0d90d6-d93a-4029-aab6-0f25f0817f45
+    m_ActionName: CharacterControll/GameExit[/Keyboard/escape,/XInputControllerWindows/start]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: CharacterControll
@@ -338,22 +329,6 @@ MonoBehaviour:
   camInput: {fileID: 0}
   playerInput: {fileID: 6150841428706181877}
   gadgetHandler: {fileID: 2540159502619986852}
---- !u!111 &6906480619714153882
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3092476754028596558}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 97712817aa815c541bfba5b5b88a39ae, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 97712817aa815c541bfba5b5b88a39ae, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &4657341201262595576
 Animator:
   serializedVersion: 4
@@ -513,11 +488,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 635286712508737552, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
       propertyPath: m_Name
-      value: gadget_sword
-      objectReference: {fileID: 0}
-    - target: {fileID: 635286712508737552, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
-      propertyPath: m_Layer
-      value: 6
+      value: GadgetSword
       objectReference: {fileID: 0}
     - target: {fileID: 1438969393305476925, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
       propertyPath: m_Layer

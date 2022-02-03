@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8315969178945858649}
   - component: {fileID: 82178002208786053}
   - component: {fileID: 2400111762077353750}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: GadgetSword
   m_TagString: Gadget
   m_Icon: {fileID: 0}

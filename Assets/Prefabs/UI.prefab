@@ -32,6 +32,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3397024665936015011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6806735252891161477}
+  - component: {fileID: 1631732583587384930}
+  m_Layer: 5
+  m_Name: MonkeBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6806735252891161477
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3397024665936015011}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4710053540031261960}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1631732583587384930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3397024665936015011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24df0841de2883242a8f17cd185d5e03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minValue: 0
+  maxValue: 5
+  value: 5
+  backgroundTexture: {fileID: 2800000, guid: 2a43de7d1c083cf4a98954a05bf7380f, type: 3}
+  unitTexture: {fileID: 2800000, guid: d1cc7928d2e76dc4b9c5d028fc307a24, type: 3}
+  textureScale: 35
+  startAngle: 170
+  arcAngle: 110
+  radious: 80
+  position: {x: 140, y: 140}
 --- !u!1 &3420245422420009311
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,6 +123,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4545246173105175632}
+  - {fileID: 6806735252891161477}
   m_Father: {fileID: 3117581779982492331}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -185,10 +245,10 @@ MonoBehaviour:
   minValue: 0
   maxValue: 5
   value: 5
-  backgroundTexture: {fileID: 0}
+  backgroundTexture: {fileID: 2800000, guid: 8b2e12099d8610e4493183da96b5ae8b, type: 3}
   unitTexture: {fileID: 2800000, guid: d1cc7928d2e76dc4b9c5d028fc307a24, type: 3}
   textureScale: 35
-  startPoint: {x: -1, y: 0.2}
-  endPoint: {x: -0.2, y: -1}
+  startAngle: 175
+  arcAngle: 100
   radious: 100
   position: {x: 120, y: 120}

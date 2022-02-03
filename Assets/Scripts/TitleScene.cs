@@ -7,7 +7,6 @@ public class TitleScene : MonoBehaviour
     
     public void OnGameStart(InputAction.CallbackContext value) {
         if (value.started) {
-            print("xd");
             SceneManager.LoadScene("Debug");
         }
     }

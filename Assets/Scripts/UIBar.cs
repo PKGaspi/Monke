@@ -12,20 +12,17 @@ public class UIBar : MonoBehaviour {
     public Texture unitTexture;
     public float textureScale = 45f;
 
-    public Vector2 startPoint = new Vector2(-1, 0);
-    public Vector2 endPoint = new Vector2(0, -1);
+    public float startAngle = 180f;
+    public float arcAngle = 270f;
     public float radious = 100f;
     public Vector2 position;
 
-    void Start() {
-        startPoint = startPoint.normalized;
-        endPoint = endPoint.normalized;
-    }
     void OnGUI() {
-        // Draw
         if (Event.current.type.Equals(EventType.Repaint)){
-            float angleBase = Vector2.Angle(Vector2.right, startPoint) * Mathf.Deg2Rad;
-            float angleStep = Vector2.SignedAngle(startPoint, endPoint) / (maxValue-1) * Mathf.Deg2Rad;
+            // Draw
+            Graphics.DrawTexture(new Rect(position.x - radious, position.y - radious, 2.3f * radious, 2.3f * radious), backgroundTexture);
+            float angleBase = startAngle * Mathf.Deg2Rad;
+            float angleStep = arcAngle / (maxValue-1) * Mathf.Deg2Rad;
             for (int i = minValue; i < value; i++)
             {
                 float angle = angleBase + i * angleStep;

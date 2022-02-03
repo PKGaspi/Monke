@@ -29,7 +29,6 @@ public class GadgetHandler : MonoBehaviour {
         }
 
         int gadgetIndex = (int) value.ReadValue<float>();
-        print(gadgetIndex);
 
         if (equipedGadgets[gadgetIndex]) {
             SetGadget(equipedGadgets[gadgetIndex]);
@@ -43,6 +42,5 @@ public class GadgetHandler : MonoBehaviour {
         Destroy(currentGadget.gameObject);
         currentGadget = Object.Instantiate(gadget, transform.position, transform.rotation);
         currentGadget.transform.parent = transform;
-        //currentGadget
     }
 }
