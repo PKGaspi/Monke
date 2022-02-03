@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class CatchableEnemy : Enemy
 {
+    private bool catched = false;
     public Renderer helmetRenderer;
     public Material helmetMaterialCalm;
     public Material helmetMaterialAlert;
 
+    public CatchHandler catchHandler;
+
     public override void OnCatch() {
-        // TODO: Increment catch counter
-        print("catch!");
+        // TODO: play sound
+        if (catched) {
+            return;
+        }
+        catched = true;
+        catchHandler.RegisterCatch();
         Die();
     }
 
     public override void OnHit() {
+        // TODO: play sound
         // Dont loose hp. Just hitstun.
         hitstunTimer = .5f;
     }

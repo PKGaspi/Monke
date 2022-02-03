@@ -10,7 +10,6 @@ public class GameExiter : MonoBehaviour
     private bool exiting = false;
 
     void Update() {
-        print(progress);
         if (!exiting) {
             progress = 0;
             return;

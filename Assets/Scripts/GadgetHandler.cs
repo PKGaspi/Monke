@@ -29,7 +29,7 @@ public class GadgetHandler : MonoBehaviour {
         }
 
         int gadgetIndex = (int) value.ReadValue<float>();
-
+        
         if (equipedGadgets[gadgetIndex]) {
             SetGadget(equipedGadgets[gadgetIndex]);
         }

@@ -288,7 +288,19 @@ MonoBehaviour:
     m_ActionId: 33295dc7-fd8e-4852-ac59-98edc723b239
     m_ActionName: CharacterControll/Gadget / Look Toggle[/XInputControllerWindows/leftShoulder,/Keyboard/upArrow]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2540159502619986852}
+        m_TargetAssemblyTypeName: GadgetHandler, Assembly-CSharp
+        m_MethodName: OnSetGadget
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 285b18c6-b1cb-4beb-bf12-f5f63b946d20
     m_ActionName: CharacterControll/Set Gadget[/XInputControllerWindows/buttonSouth,/Keyboard/1,/XInputControllerWindows/buttonWest,/Keyboard/2,/XInputControllerWindows/buttonNorth,/Keyboard/3,/XInputControllerWindows/buttonEast,/Keyboard/4]
   - m_PersistentCalls:
@@ -490,14 +502,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GadgetSword
       objectReference: {fileID: 0}
-    - target: {fileID: 1438969393305476925, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2616422329555219182, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 5479576992225604093, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -541,10 +545,6 @@ PrefabInstance:
     - target: {fileID: 5479576992225604093, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9012643641355993847, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 499c40e9e6b485146ac3f18956cb9fad, type: 3}
