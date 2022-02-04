@@ -27,13 +27,14 @@ public class ThirdPersonCharacter : Character {
     }
 
     // Update is called once per frame
-    void FixedUpdate() {
-
+    protected override void FixedUpdate() {
         if (controller.isGrounded) {
             aerialJumpsLeft = AERIAL_JUMPS;
         }
-
+        
         Move(walkSpeed);
+
+        base.FixedUpdate();
     }
 
     public void OnMovement(InputAction.CallbackContext value) {

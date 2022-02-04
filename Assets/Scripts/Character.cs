@@ -15,19 +15,33 @@ public class Character : MonoBehaviour {
     public Animator animator;
 
     public int hp;
+    
     protected Vector3 velocity;
     protected Vector3 moveDir = Vector3.zero;
     protected float invencibilityTimer = 0f;
     protected bool invencible = false;
+    protected Vector3 spawnPosition;
+    protected Quaternion spawnRotation;
  
     protected void Start() {
         hp = maxHp;
+        spawnPosition = transform.position;
+        spawnRotation = transform.rotation;
     }
 
     void Update() {
         if (IsInvencible()) {
             invencibilityTimer -= Time.deltaTime;
             animator.SetFloat("invencibilityTimer", invencibilityTimer);
+        }
+
+    }
+
+    protected virtual void FixedUpdate() {
+        // print(transform.position.y);
+        if (transform.position.y <= -15f) {
+            OnHit();
+            Respawn();
         }
     }
 
@@ -79,5 +93,12 @@ public class Character : MonoBehaviour {
 
     public bool IsInvencible() {
         return invencibilityTimer > 0f;
+    }
+
+    public void Respawn() {
+        transform.position = spawnPosition;
+        transform.rotation = spawnRotation;
+        // velocity = Vector3.zero;
+        // moveDir = Vector3.zero;
     }
 }

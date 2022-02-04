@@ -37,6 +37,8 @@ public class Enemy : Character
         if (velocity != Vector3.zero) {
             transform.forward = moveDir; 
         }
+
+        base.FixedUpdate();
     }
     
     
