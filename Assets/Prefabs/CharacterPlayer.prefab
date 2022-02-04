@@ -144,10 +144,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1767686176129573690}
   - component: {fileID: 156206088993108740}
-  - component: {fileID: 6150841428706181877}
   - component: {fileID: 5211855785025504512}
   - component: {fileID: 4657341201262595576}
   - component: {fileID: 6184771637832305657}
+  - component: {fileID: 2450679517833973092}
   m_Layer: 6
   m_Name: CharacterPlayer
   m_TagString: Players
@@ -190,7 +190,66 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6150841428706181877
+--- !u!114 &5211855785025504512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3092476754028596558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7327633a4ad5d478b12b0ad9c3d497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 5
+  walkSpeed: 3.5
+  runSpeed: 4
+  jumpSpeed: 6
+  HPBar: {fileID: 0}
+  invencibilityTime: 1.5
+  controller: {fileID: 156206088993108740}
+  animator: {fileID: 4657341201262595576}
+  hp: 0
+  cam: {fileID: 0}
+  camInput: {fileID: 0}
+  playerInput: {fileID: 2450679517833973092}
+  gadgetHandler: {fileID: 2540159502619986852}
+--- !u!95 &4657341201262595576
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3092476754028596558}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 87acd4cb011af504a8dbe0a04ef08f52, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &6184771637832305657
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3092476754028596558}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2450679517833973092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,10 +274,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3c4e9fb2-c9c0-4c4f-b64d-45404a979490
-    m_ActionName: UI/GameStart[/XInputControllerWindows/buttonWest,/XInputControllerWindows/buttonSouth,/XInputControllerWindows/buttonEast,/XInputControllerWindows/buttonNorth,/XInputControllerWindows/start,/XInputControllerWindows/select,/Keyboard/enter,/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5211855785025504512}
@@ -311,70 +366,15 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 4e0d90d6-d93a-4029-aab6-0f25f0817f45
     m_ActionName: CharacterControll/GameExit[/Keyboard/escape,/XInputControllerWindows/start]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3c4e9fb2-c9c0-4c4f-b64d-45404a979490
+    m_ActionName: UI/GameStart[/XInputControllerWindows/buttonWest,/XInputControllerWindows/buttonSouth,/XInputControllerWindows/buttonEast,/XInputControllerWindows/buttonNorth,/XInputControllerWindows/start,/XInputControllerWindows/select,/Keyboard/enter,/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: CharacterControll
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &5211855785025504512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3092476754028596558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a7327633a4ad5d478b12b0ad9c3d497, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHp: 5
-  walkSpeed: 3.5
-  runSpeed: 4
-  jumpSpeed: 6
-  HPBar: {fileID: 0}
-  invencibilityTime: 1.5
-  controller: {fileID: 156206088993108740}
-  animator: {fileID: 4657341201262595576}
-  hp: 0
-  cam: {fileID: 0}
-  camInput: {fileID: 0}
-  playerInput: {fileID: 6150841428706181877}
-  gadgetHandler: {fileID: 2540159502619986852}
---- !u!95 &4657341201262595576
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3092476754028596558}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 87acd4cb011af504a8dbe0a04ef08f52, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!136 &6184771637832305657
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3092476754028596558}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3821056978667855587
 GameObject:
   m_ObjectHideFlags: 0

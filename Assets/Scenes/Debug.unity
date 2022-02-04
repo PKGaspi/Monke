@@ -1125,6 +1125,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1767686176129573690, guid: 1677fa363b6208b438cf53de437c51e2, type: 3}
   m_PrefabInstance: {fileID: 1371052653}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1049436677 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2450679517833973092, guid: 1677fa363b6208b438cf53de437c51e2, type: 3}
+  m_PrefabInstance: {fileID: 1371052653}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333222999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1050084082 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1745931926131752343, guid: d23d68ff6423e20449434ab6998474f0, type: 3}
@@ -1349,6 +1360,10 @@ PrefabInstance:
       propertyPath: camInput
       value: 
       objectReference: {fileID: 1434796157}
+    - target: {fileID: 5211855785025504512, guid: 1677fa363b6208b438cf53de437c51e2, type: 3}
+      propertyPath: playerInput
+      value: 
+      objectReference: {fileID: 1049436677}
     - target: {fileID: 5270089988110151642, guid: 1677fa363b6208b438cf53de437c51e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1762,7 +1777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerIndex: -1
-  XYAxis: {fileID: 2989263718597391014, guid: ca36fa8b4e7a4914bb25ca89364b28a6, type: 3}
+  XYAxis: {fileID: 129902494307102840, guid: ca36fa8b4e7a4914bb25ca89364b28a6, type: 3}
   ZAxis: {fileID: 0}
 --- !u!1 &1466407076
 GameObject:
