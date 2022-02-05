@@ -365,6 +365,7 @@ GameObject:
   - component: {fileID: 1236007011}
   - component: {fileID: 1236007012}
   - component: {fileID: 1236007013}
+  - component: {fileID: 1236007014}
   m_Layer: 0
   m_Name: Scene
   m_TagString: Untagged
@@ -402,6 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88cf06dbc8c576499a12cf8bd4ed247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  music: {fileID: 1236007014}
 --- !u!114 &1236007013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,34 +430,6 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a71aefed-b366-447b-b1d8-e24c0696b4d3
-    m_ActionName: CharacterControll/Movement[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 72bd40bc-ce97-4f2d-bc4d-b3fc95f69059
-    m_ActionName: CharacterControll/Jump[/XInputControllerWindows/rightShoulder,/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 45c61803-e975-4b32-90b6-4cd9f5309ba2
-    m_ActionName: CharacterControll/Gadget[/XInputControllerWindows/rightStick,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f2b57a38-967b-4ef5-8eee-09609e58add3
-    m_ActionName: CharacterControll/Look[/XInputControllerWindows/rightStick,/Mouse/delta]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 14d2ceef-1193-4fd0-8efe-990c225d4252
-    m_ActionName: CharacterControll/Gadget / Look Toggle[/XInputControllerWindows/leftShoulder,/Keyboard/upArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0d941b89-754c-4196-b9b3-6e3916b43ce0
-    m_ActionName: CharacterControll/Set Gadget[/XInputControllerWindows/buttonSouth,/Keyboard/1,/XInputControllerWindows/buttonWest,/Keyboard/2,/XInputControllerWindows/buttonNorth,/Keyboard/3,/XInputControllerWindows/buttonEast,/Keyboard/4]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a42d397b-fa15-4fb6-9c9c-fb07554f3c80
-    m_ActionName: CharacterControll/GadgetActivate[/Mouse/leftButton]
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1236007012}
         m_TargetAssemblyTypeName: TitleScene, Assembly-CSharp
@@ -471,11 +445,139 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3c4e9fb2-c9c0-4c4f-b64d-45404a979490
     m_ActionName: UI/GameStart[/XInputControllerWindows/buttonWest,/XInputControllerWindows/buttonSouth,/XInputControllerWindows/buttonEast,/XInputControllerWindows/buttonNorth,/XInputControllerWindows/start,/XInputControllerWindows/select,/Keyboard/enter,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3fc8cb7a-2658-4424-8755-04c080ebcb0a
+    m_ActionName: CharacterControll/Movement[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2c9f6092-6b19-4330-8d68-44ed572ca0d0
+    m_ActionName: CharacterControll/Jump[/XInputControllerWindows/rightShoulder,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 00456e43-0bd2-4f93-985a-f6cc64c4cb36
+    m_ActionName: CharacterControll/Gadget[/XInputControllerWindows/rightStick,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c98d173d-7b68-4774-a5a3-4247465307ba
+    m_ActionName: CharacterControll/Look[/XInputControllerWindows/rightStick,/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 33295dc7-fd8e-4852-ac59-98edc723b239
+    m_ActionName: CharacterControll/Gadget / Look Toggle[/XInputControllerWindows/leftShoulder,/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 285b18c6-b1cb-4beb-bf12-f5f63b946d20
+    m_ActionName: CharacterControll/Set Gadget[/XInputControllerWindows/buttonSouth,/Keyboard/1,/XInputControllerWindows/buttonWest,/Keyboard/2,/XInputControllerWindows/buttonNorth,/Keyboard/3,/XInputControllerWindows/buttonEast,/Keyboard/4]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3dd9b12f-aa3e-4bc2-aee4-9a3cd6fe7f95
+    m_ActionName: CharacterControll/GadgetActivate[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4e0d90d6-d93a-4029-aab6-0f25f0817f45
+    m_ActionName: CharacterControll/GameExit[/Keyboard/escape,/XInputControllerWindows/start]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 059548cb-14ce-484e-99a8-74fc3f2eae85
+  m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!82 &1236007014
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236007010}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -8539605922254700544, guid: ad40b4796151e6d40bb1a97720d5dce2, type: 2}
+  m_audioClip: {fileID: 8300000, guid: d4b61711ec2885149b32e9e30b0b2208, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1729968534
 GameObject:
   m_ObjectHideFlags: 0
