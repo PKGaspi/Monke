@@ -7,17 +7,7 @@ public class GadgetHandler : MonoBehaviour {
 
     public Gadget[] equipedGadgets = new Gadget[4];
     public Gadget currentGadget;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public AudioSource setSound;
 
     public void Use(float inclination) {
         currentGadget.Use(inclination);
@@ -36,9 +26,10 @@ public class GadgetHandler : MonoBehaviour {
     }
 
     public void SetGadget(Gadget gadget) {
-        if (currentGadget == gadget) {
+        if (currentGadget.GetType() == gadget.GetType()) {
             return;
         }
+        setSound.Play();
         Destroy(currentGadget.gameObject);
         currentGadget = Object.Instantiate(gadget, transform.position, transform.rotation);
         currentGadget.transform.parent = transform;

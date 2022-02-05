@@ -12,7 +12,6 @@ public class CatchableEnemy : Enemy
     public CatchHandler catchHandler;
 
     public override void OnCatch() {
-        // TODO: play sound
         if (catched) {
             return;
         }
@@ -22,7 +21,7 @@ public class CatchableEnemy : Enemy
     }
 
     public override void OnHit() {
-        // TODO: play sound
+        hurtSound.Play();
         // Dont loose hp. Just hitstun.
         hitstunTimer = .5f;
     }

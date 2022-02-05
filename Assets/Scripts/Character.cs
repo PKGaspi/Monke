@@ -13,6 +13,7 @@ public class Character : MonoBehaviour {
     public float invencibilityTime = 1.5f;
     public CharacterController controller;
     public Animator animator;
+    public AudioSource hurtSound;
 
     public int hp;
     
@@ -38,7 +39,6 @@ public class Character : MonoBehaviour {
     }
 
     protected virtual void FixedUpdate() {
-        // print(transform.position.y);
         if (transform.position.y <= -15f) {
             OnHit();
             Respawn();
@@ -62,7 +62,7 @@ public class Character : MonoBehaviour {
         if (IsInvencible()) {
             return;
         }
-        // TODO: Play sound
+        hurtSound.Play();
         invencibilityTimer = invencibilityTime;
         TakeDamage();
     }
@@ -86,7 +86,6 @@ public class Character : MonoBehaviour {
     }
 
     protected virtual void Die() {
-        // TODO: play sound
         // Delete this instance.
         Destroy(gameObject);
     }
@@ -98,7 +97,5 @@ public class Character : MonoBehaviour {
     public void Respawn() {
         transform.position = spawnPosition;
         transform.rotation = spawnRotation;
-        // velocity = Vector3.zero;
-        // moveDir = Vector3.zero;
     }
 }

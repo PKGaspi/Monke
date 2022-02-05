@@ -13,6 +13,10 @@ public class ThirdPersonCharacter : Character {
     public PlayerInput playerInput;
     public GadgetHandler gadgetHandler;
 
+    public AudioSource healSound;
+    public AudioSource groundJumpSound;
+    public AudioSource airJumpSound;
+
     private Vector3 gadgetDir = Vector3.zero;
 
     private float aerialJumpSpeed = 8.0f;
@@ -51,11 +55,13 @@ public class ThirdPersonCharacter : Character {
     public void OnJump(InputAction.CallbackContext value) {
         if (value.started && aerialJumpsLeft > 0 && gadgetDir == Vector3.zero) {
             if (!controller.isGrounded) {
+                airJumpSound.Play();
                 // Remove aerial jump.
                 aerialJumpsLeft--;
                 velocity.y = aerialJumpSpeed;
             }
             else {
+                groundJumpSound.Play();
                 velocity.y = jumpSpeed;
             }
         }
@@ -113,7 +119,7 @@ public class ThirdPersonCharacter : Character {
     void OnTriggerEnter(Collider col) {
         if (col.gameObject.layer == LayerMask.NameToLayer("Drop") &&
                 hp < maxHp) {
-            // TODO: Play heal sound
+            healSound.Play();
             Heal();
             Destroy(col.gameObject);
         }

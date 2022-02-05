@@ -4,6 +4,7 @@ public abstract class Gadget : MonoBehaviour {
 
     public Animation activateAnimation;
     public float activeTime = .3f;
+    public AudioSource hitSound;
 
     private Vector3 defaultRotation;
     private Vector3 defaultPosition;
@@ -40,6 +41,7 @@ public abstract class Gadget : MonoBehaviour {
     }
 
     protected void Activate() {
+        hitSound.Play();
         activateAnimation.Play();
         activeTimer = activeTime;
     }

@@ -14,7 +14,7 @@ public class Enemy : Character
     protected float idleTimer = 0;
 
 
-    void FixedUpdate()
+    protected override void FixedUpdate()
     {
         hitstunTimer -= Time.deltaTime;
         if (hitstunTimer > 0) {

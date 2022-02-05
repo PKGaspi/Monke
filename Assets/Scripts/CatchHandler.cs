@@ -7,6 +7,7 @@ public class CatchHandler : MonoBehaviour
 {
     public int neededCatches = 7;
     public UIBar catchesBar;
+    public AudioSource catchSound;
     private int catches = 0;
 
     void Start() {
@@ -15,6 +16,7 @@ public class CatchHandler : MonoBehaviour
     }
 
     public void RegisterCatch() {
+        catchSound.Play();
         catches++;
         catchesBar.value = neededCatches - catches;
         if (catches >= neededCatches) {

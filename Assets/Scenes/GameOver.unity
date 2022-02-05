@@ -403,7 +403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88cf06dbc8c576499a12cf8bd4ed247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 1236007014}
 --- !u!114 &1236007013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,7 +495,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
